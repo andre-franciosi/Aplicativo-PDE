@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/botao1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Botão 1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/white" />
+
+    <Button
+        android:id="@+id/botao2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Botão 2"
+        android:layout_below="@id/botao1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white" />
+
+    <Button
+        android:id="@+id/botao3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Botão 3"
+        android:layout_below="@id/botao2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white" />
+
+    <Button
+        android:id="@+id/botao4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Botão 4"
+        android:layout_below="@id/botao3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white" />
+
+</RelativeLayout>
