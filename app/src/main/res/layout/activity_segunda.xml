@@ -1,45 +1,94 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/pde2"
+    tools:context=".SegundaActivity">
 
-    <Button
-        android:id="@+id/botao1"
-        android:layout_width="wrap_content"
+    <!-- Botão Retangular -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/botaoRetangular"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Botão 1"
+        android:text="Botão Retangular"
+        android:background="@drawable/botao_bluetooth"
+        android:textColor="@android:color/black"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:background="@android:color/white" />
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        android:gravity="center"
+        android:layout_gravity="center" />
 
-    <Button
-        android:id="@+id/botao2"
-        android:layout_width="wrap_content"
+    <!-- Grid de Botões no Estilo iOS -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Botão 2"
-        android:layout_below="@id/botao1"
+        android:layout_below="@id/botaoRetangular"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:background="@android:color/white" />
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="16dp"
+        android:columnCount="2"
+        android:padding="8dp">
 
-    <Button
-        android:id="@+id/botao3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Botão 3"
-        android:layout_below="@id/botao2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:background="@android:color/white" />
+        <!-- Botão 1 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/botao1"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:background="@drawable/botao_opcoes"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Botão 1" />
 
-    <Button
-        android:id="@+id/botao4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Botão 4"
-        android:layout_below="@id/botao3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:background="@android:color/white" />
+        <!-- Botão 2 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/botao2"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:background="@drawable/botao_opcoes"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Botão 2" />
 
+        <!-- Botão 3 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/botao3"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:background="@drawable/botao_opcoes"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Botão 3" />
+
+        <!-- Botão 4 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/botao4"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:background="@drawable/botao_opcoes"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Botão 4" />
+    </GridLayout>
 </RelativeLayout>

@@ -7,14 +7,14 @@
     android:background="@drawable/pde"
     tools:context=".MainActivity">
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/botao_inicial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="83dp"
-        android:background="@android:color/white"
+        android:background="@drawable/botao_inicio"
         android:text="CONTINUE"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textColorHighlight="#FFFFFF"
         android:textColorHint="#FFFFFF"
         android:textColorLink="#FFFFFF"
