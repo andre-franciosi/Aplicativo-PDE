@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        final Button botao = findViewById(R.id.botao_inicial);
         final Animation scaleAnimation = AnimationUtils.loadAnimation(this, R.anim.scale_animation);
 
         botao.setOnClickListener(new View.OnClickListener() {
