@@ -1,27 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/pde"
-    tools:context=".MainActivity">
+    android:background="@drawable/backgroun_main">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/botao_inicial"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="83dp"
-        android:background="@drawable/botao_inicio"
-        android:text="CONTINUE"
-        android:textColor="@color/black"
-        android:textColorHighlight="#FFFFFF"
-        android:textColorHint="#FFFFFF"
-        android:textColorLink="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="364dp"
+        android:layout_height="372dp"
+        android:layout_centerInParent="true"
+        android:alpha="1.0"
+        android:src="@drawable/logo"
+        android:visibility="visible" />
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

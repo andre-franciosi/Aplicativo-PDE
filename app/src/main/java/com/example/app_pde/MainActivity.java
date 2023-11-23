@@ -3,29 +3,34 @@ package com.example.app_pde;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.Button;
+import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
+
+    private ImageView imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final Button botao = findViewById(R.id.botao_inicial);
-        final Animation scaleAnimation = AnimationUtils.loadAnimation(this, R.anim.scale_animation);
+        imageView = findViewById(R.id.imageView);
 
-        botao.setOnClickListener(new View.OnClickListener() {
+        imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Aplica a animação ao botão clicado
-                botao.startAnimation(scaleAnimation);
+                // Cria uma animação de fade para a ImageView
+                Animation fadeOut = new AlphaAnimation(1.0f, 0.0f);
+                fadeOut.setDuration(1000); // Define a duração da animação em milissegundos
+
+                // Aplica a animação à ImageView
+                imageView.startAnimation(fadeOut);
 
                 // Define um AnimationListener para executar a ação após a animação
-                scaleAnimation.setAnimationListener(new Animation.AnimationListener() {
+                fadeOut.setAnimationListener(new Animation.AnimationListener() {
                     @Override
                     public void onAnimationStart(Animation animation) {
                         // Ação a ser executada quando a animação começa (opcional)
@@ -34,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onAnimationEnd(Animation animation) {
                         // Ação a ser executada após o término da animação
-                        iniciarSegundaActivity(); // Função para iniciar a próxima atividade
+                        iniciarSegundaActivity(); // Navega para a SegundaActivity
                     }
 
                     @Override
@@ -48,8 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void iniciarSegundaActivity() {
         // Criar uma Intent para iniciar a segunda atividade
-        Intent intent = new Intent(MainActivity.this, SegundaActivity.class);
+        Intent intent = new Intent(MainActivity.this, TerceiraActivity.class);
         startActivity(intent);
     }
 }
-
